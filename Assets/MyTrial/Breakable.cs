@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Breakable : MonoBehaviour
 {
     public List<GameObject> breakablePieces;
     public float timeToBreak = 2;
     private float timer = 0;
+    private XRGrabInteractable grabInteractable;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,13 @@ public class Breakable : MonoBehaviour
         foreach (var item in breakablePieces)
         {
             item.SetActive(false);
+            //Debug.Log($"inactive son pieces: {item.name}");
+        }
+        // Check whether there's any collider registered in parent node
+        grabInteractable = GetComponent<XRGrabInteractable>();
+        foreach (var col in grabInteractable.colliders)
+        {
+            Debug.Log($"Registered collider: {col.name}");
         }
     }
 
@@ -22,12 +31,19 @@ public class Breakable : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeToBreak)
         {
-            foreach (var item in breakablePieces)
+            // 1. Detach each piece from parent first
+            foreach (var piece in breakablePieces)
             {
-                item.SetActive(true);
-                item.transform.parent = null;
+                piece.transform.parent = null;
             }
+            // 2. Unregister parent collider (double check to avoid multiple registration)
+            if (grabInteractable) grabInteractable.enabled = false;
             gameObject.SetActive(false);
+            // 3. Now activate each pieces
+            foreach (var piece in breakablePieces)
+            {
+                piece.SetActive(true);
+            }
         }
     }
 
