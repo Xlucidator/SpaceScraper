@@ -1,0 +1,77 @@
+# Unity generated folders
+[Ll]ibrary
+[Tt]emp
+[Oo]bj
+[Bb]uild
+[Bb]uilds
+[Uu]serSettings
+[Mm]emory[Cc]aptures
+[Ll]ogs
+
+# Asset store tools
+**/Assets/AssetStoreTools
+**/assets/assetstoretools
+/Assets/Plugins/PlasticSCM*
+/assets/plugins/PlasticSCM*
+
+# Package manager files
+*.private
+*.private.meta
+^*.private.[0-9]+$
+^*.private.[0-9]+.meta$
+
+# Ignore IDE metadata
+.vs
+.vscode
+.idea
+.gradle
+.consulo
+.plastic
+ExportedObj
+
+# Mono/VS/Unity generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.swp
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Crashlytics & debug
+sysinfo.txt
+crashlytics-build.properties
+UpgradeLog.htm
+
+# Build artifacts
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.ipa
+*.exe
+*.zip
+*.tar.gz
+
+# Addressable Assets build files
+**/Assets/AddressableAssetsData/*/*.bin*
+**/assets/addressableassetsdata/*/*.bin*
+**/Assets/StreamingAssets/aa.meta
+**/assets/streamingassets/*/aa/*
+
+# Miscellaneous
+.DS_Store*
+Thumbs.db
+Desktop.ini
+~UnityDirMonSyncFile~*
