@@ -7,6 +7,8 @@ TagManager:
   - Meteor
   - Left Hand
   - Right Hand
+  - Energy
+  - Power Source
   layers:
   - Default
   - TransparentFX
