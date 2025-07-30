@@ -718,6 +718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 124196197}
   socketInteractor: {fileID: 1062365164}
+  animator: {fileID: 1247106204}
+  animatorPowerBoolName: powered
 --- !u!1 &115976401
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +756,7 @@ Transform:
   - {fileID: 1296681356}
   - {fileID: 543415357}
   - {fileID: 286939142}
+  - {fileID: 370929379}
   m_Father: {fileID: 450533289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &115976407
@@ -1305,6 +1308,7 @@ Transform:
   - {fileID: 1529966221}
   - {fileID: 1049128160}
   - {fileID: 1210269625}
+  - {fileID: 1272283922}
   m_Father: {fileID: 450533289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &207630033
@@ -2228,7 +2232,7 @@ PrefabInstance:
     - target: {fileID: 2761784063978902507, guid: c1800acf6366418a9b5f610249000331,
         type: 3}
       propertyPath: m_Name
-      value: Rgiht Teleport Interactor
+      value: Right Teleport Interactor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2550,10 +2554,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Push Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 975877478}
   m_SourcePrefab: {fileID: 100100000, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
 --- !u!4 &355845509 stripped
 Transform:
@@ -2784,6 +2797,105 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 368015120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &370929378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370929379}
+  - component: {fileID: 370929380}
+  m_Layer: 0
+  m_Name: Right Poke Interactor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &370929379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370929378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 115976402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370929380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370929378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0924bcaa9eb50df458a783ae0e2b59f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 2
+  m_AttachTransform: {fileID: 1574779198}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PokeDepth: 0.1
+  m_PokeWidth: 0.0075
+  m_PokeSelectWidth: 0.015
+  m_PokeHoverRadius: 0.015
+  m_PokeInteractionOffset: 0.005
+  m_PhysicsLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_PhysicsTriggerInteraction: 1
+  m_RequirePokeFilter: 1
+  m_EnableUIInteraction: 1
+  m_DebugVisualizationsEnabled: 0
+  m_UIHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UIHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &371230690 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6514390, guid: 3fb07e96bb0cae643a28994c86ddc64e,
@@ -3396,6 +3508,12 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &522560366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8575555731640000212, guid: b7ee10ba487867d47a2942e352102583,
+    type: 3}
+  m_PrefabInstance: {fileID: 1049128159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &525465104 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6532934, guid: 3fb07e96bb0cae643a28994c86ddc64e,
@@ -4730,6 +4848,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1135626950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &975877473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 355845508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &975877478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975877473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e96bdbeae1599042b3a6a046d65b416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1247106204}
+  boolName: open
 --- !u!4 &1028911030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3496798070150495656, guid: dc40d4936f6d7f44a88297e1d42d288a,
@@ -6698,6 +6836,111 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1247106201}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1247106204 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9574882, guid: ea798cfb4939d4441b95d1bd39d0767f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1247106201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272283921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272283922}
+  - component: {fileID: 1272283923}
+  m_Layer: 0
+  m_Name: Left Poke Interactor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272283922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272283921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207630032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1272283923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272283921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0924bcaa9eb50df458a783ae0e2b59f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 2
+  m_AttachTransform: {fileID: 522560366}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PokeDepth: 0.1
+  m_PokeWidth: 0.0075
+  m_PokeSelectWidth: 0.015
+  m_PokeHoverRadius: 0.015
+  m_PokeInteractionOffset: 0.005
+  m_PhysicsLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_PhysicsTriggerInteraction: 1
+  m_RequirePokeFilter: 1
+  m_EnableUIInteraction: 1
+  m_DebugVisualizationsEnabled: 0
+  m_UIHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UIHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1282767777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8341,6 +8584,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413196, guid: 5412c75372d92be4484fa4a55b5c99e3,
     type: 3}
   m_PrefabInstance: {fileID: 1536284330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1574779198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7713032012916009969, guid: 06cd9e9af97d88946893bd961c4d7f4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1296681355}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1610157297
 PrefabInstance:
