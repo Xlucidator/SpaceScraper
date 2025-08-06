@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Breakable : MonoBehaviour
 {
     public List<GameObject> breakablePieces;
     public float timeToBreak = 2;
+    public UnityEvent onBreak;
     private float timer = 0;
     private XRGrabInteractable grabInteractable;
 
@@ -38,6 +40,7 @@ public class Breakable : MonoBehaviour
             }
             // 2. Unregister parent collider (double check to avoid multiple registration)
             if (grabInteractable) grabInteractable.enabled = false;
+            onBreak?.Invoke();
             gameObject.SetActive(false);
             // 3. Now activate each pieces
             foreach (var piece in breakablePieces)

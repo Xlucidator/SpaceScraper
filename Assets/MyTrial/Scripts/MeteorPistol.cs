@@ -18,6 +18,7 @@ public class MeteorPistol : MonoBehaviour
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(args => StartShooting());
         grabInteractable.deactivated.AddListener(args => StopShooting());
+        grabInteractable.selectExited.AddListener(args => StopShooting()); // To avoid the situation that we ungrab the gun before deactivate it!
     }
 
     public void StartShooting()
